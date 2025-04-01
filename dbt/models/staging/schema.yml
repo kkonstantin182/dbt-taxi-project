@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: staging
+    database: genial-charter-455214-g3
+    schema: dbt_dataset
+    
+    tables:
+      - name: taxi_trips
+
