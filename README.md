@@ -35,3 +35,6 @@ The data transformation is structured through a series of dbt models:
 
 ![Data Pipeline](https://github.com/kkonstantin182/dbt-taxi-project/blob/main/images/dbt_schema.PNG)
 
+## Dashboard
+
+![Dashboard](https://github.com/kkonstantin182/dbt-taxi-project/blob/main/images/dashboard_screenshot.PNG)
