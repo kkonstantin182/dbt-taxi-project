@@ -24,3 +24,12 @@ The transformation layer in **dbt** then tracks how their earnings evolved over 
 📊 **Explore the dashboard here:** [Google Sheets Link](https://docs.google.com/spreadsheets/d/1SsdCq5w2Ci0W8gOLWCuN43CIYQmUgR7GXdhiioHVGCE/edit?usp=sharing)  
 
 > ⚠️ *Note: If the sheet is empty, my Google Cloud free trial has expired.*
+
+## Data Transformation Layer (dbt)
+
+The data transformation is structured through a series of dbt models:
+
+- **`stg_taxi_trips`**: A staging model that contains raw taxi trip data.
+- **`top_three_cars`**: Identifies the top three drivers who received the highest total tips in April 2018.
+- **`tips_change_with_time`**: An incremental model that aggregates data by `year_month`, calculating the total tips for each driver and computing the percentage change in tips over time.
+
