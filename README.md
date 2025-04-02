@@ -33,3 +33,5 @@ The data transformation is structured through a series of dbt models:
 - **`top_three_cars`**: Identifies the top three drivers who received the highest total tips in April 2018.
 - **`tips_change_with_time`**: An incremental model that aggregates data by `year_month`, calculating the total tips for each driver and computing the percentage change in tips over time.
 
+![Data Pipeline](https://github.com/kkonstantin182/dbt-taxi-project/blob/main/images/dbt_schema.PNG)
+
