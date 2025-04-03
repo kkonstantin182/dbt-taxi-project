@@ -4,7 +4,102 @@ sources:
   - name: staging
     database: genial-charter-455214-g3
     schema: dbt_dataset
-    
+
     tables:
       - name: taxi_trips
 
+models:
+  - name: stg_taxi_trips
+    description: "Chicago taxi trips dataset containing trip details, fare, and location data."
+    columns:
+      - name: unique_key
+        data_type: string
+        description: "Unique identifier for each trip."
+
+      - name: taxi_id
+        data_type: string
+        description: "Unique identifier for the taxi."
+
+      - name: trip_start_timestamp
+        data_type: timestamp
+        description: "Timestamp when the trip started."
+
+      - name: trip_end_timestamp
+        data_type: timestamp
+        description: "Timestamp when the trip ended."
+
+      - name: trip_seconds
+        data_type: int64
+        description: "Duration of the trip in seconds."
+
+      - name: trip_miles
+        data_type: float64
+        description: "Distance traveled during the trip in miles."
+
+      - name: pickup_census_tract
+        data_type: int64
+        description: "Census tract of the pickup location."
+
+      - name: dropoff_census_tract
+        data_type: int64
+        description: "Census tract of the dropoff location."
+
+      - name: pickup_community_area
+        data_type: int64
+        description: "Community area code where the trip started."
+
+      - name: dropoff_community_area
+        data_type: int64
+        description: "Community area code where the trip ended."
+
+      - name: fare
+        data_type: float64
+        description: "Fare amount charged for the trip."
+
+      - name: tips
+        data_type: float64
+        description: "Tip amount given by the passenger."
+
+      - name: tolls
+        data_type: float64
+        description: "Toll charges incurred during the trip."
+
+      - name: extras
+        data_type: float64
+        description: "Additional charges such as surcharges or fees."
+
+      - name: trip_total
+        data_type: float64
+        description: "Total amount paid for the trip including fare, tips, tolls, and extras."
+
+      - name: payment_type
+        data_type: string
+        description: "Method of payment (e.g., cash, credit card)."
+
+      - name: company
+        data_type: string
+        description: "Taxi company that provided the service."
+
+      - name: pickup_latitude
+        data_type: float64
+        description: "Latitude coordinate of the pickup location."
+
+      - name: pickup_longitude
+        data_type: float64
+        description: "Longitude coordinate of the pickup location."
+
+      - name: pickup_location
+        data_type: string
+        description: "Formatted pickup location information."
+
+      - name: dropoff_latitude
+        data_type: float64
+        description: "Latitude coordinate of the dropoff location."
+
+      - name: dropoff_longitude
+        data_type: float64
+        description: "Longitude coordinate of the dropoff location."
+
+      - name: dropoff_location
+        data_type: string
+        description: "Formatted dropoff location information."
